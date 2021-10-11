@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="aside-section">
+      <header>
+        <a href="index.html">
+          <div class="logo-section">
+            <img src="media/logo.png" alt="fakeImg" height="160px" />
+          </div>
+        </a>
+      </header>
+      <div class="aside-button">
+        <button id="sizeBtn" class="btn"><p>FILTER BY SIZE</p></button>
+        <form class="size-form" id="sizeForm">
+          <p>Search restaurants by sizes</p>
+          <label for="selectSize">Select one of 3 restaurant categories:</label>
+          <select name="selectSize" id="selectSize" class="select-size">
+            <!-- Data from app.js -->
+          </select>
+          <div class="row">
+            <button
+              type="button"
+              class="advanced-search-btn"
+              id="advancedSearchButton"
+            >
+              Advanced searh ↓
+            </button>
+            <button type="submit" class="submitBtn" id="submitBtn">
+              Search
+            </button>
+          </div>
+        </form>
+        <form class="price-range-form" id="sizeAdvancedForm">
+          <p>Advanced search</p>
+          <label for="inputNumberOfTablesMin"
+            >Input the minminum number of tables:
+          </label>
+          <input
+            type="number"
+            id="inputNumberOfTablesMin"
+            placeholder="Eg: 5"
+          />
+          <label for="inputNumberOfTablesMax"
+            >Input the maximum number of tables:
+          </label>
+          <input
+            type="number"
+            id="inputNumberOfTablesMax"
+            placeholder="Eg: 70"
+          />
+          <button type="submit" class="submitBtn" id="submitBtn">Search</button>
+        </form>
+      </div>
+      <div class="aside-button">
+        <button id="priceRangeBtn" class="btn">
+          <p>FILTER BY PRICE RANGE</p>
+        </button>
+        <form class="price-range-form" id="priceRangeFastForm">
+          <p>Fast Search</p>
+          <label for="selectPriceRange"
+            >Select one of 3 restaurant categories:</label
+          >
+          <select
+            name="selectPriceRange"
+            id="selectPriceRange"
+            class="select-price-range"
+          >
+            <!-- Data from app.js -->
+          </select>
+          <div class="row">
+            <button
+              type="button"
+              class="advanced-search-btn"
+              id="advancedSearchButton"
+            >
+              Advanced searh ↓
+            </button>
+            <button type="submit" class="submitBtn" id="submitBtn">
+              Search
+            </button>
+          </div>
+        </form>
+        <form class="price-range-form" id="priceRangeAdvancedForm">
+          <p>Advanced search</p>
+          <label for="inputPriceRangeMin"
+            >Input the minminum value you are willing to pay for a meal (in
+            RSD):
+          </label>
+          <input type="number" id="inputPriceRangeMin" placeholder="Eg: 300" />
+          <label for="inputPriceRangeMax"
+            >Input the maximum value you are willing to pay for a meal (in RSD):
+          </label>
+          <input type="number" id="inputPriceRangeMax" placeholder="Eg: 1200" />
+          <button type="submit" class="submitBtn" id="submitBtn">Search</button>
+        </form>
+      </div>
+      <div class="aside-button">
+        <button id="workingHoursBtn" class="btn">
+          <p>FILTER BY WORKING HOURS</p>
+        </button>
+        <form class="working-hours-form" id="workingHoursFormAtGivenTime">
+          <p>Search at given time</p>
+          <label for="inputTime">Open at:</label>
+          <input type="text" id="inputTime" placeholder="Eg: 12:40" />
+          <div class="row">
+            <button
+              type="button"
+              class="advanced-search-btn"
+              id="openNowBtn"
+            >
+              Open now
+            </button>
+            <button type="submit" class="submitBtn" id="submitBtn">
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="aside-button">
+        <button id="typesOfFoodBtn" class="btn">
+          <p>FILTER BY TYPES OF FOOD</p>
+        </button>
+        <form class="types-of-food-form" id="typesOfFoodForm">
+          <p>Filter by types of food</p>
+          <div class="row">
+            <button
+              type="button"
+              class="advanced-search-btn"
+              id="advancedSearchButton"
+            >
+             All
+            </button>
+            <button type="submit" class="submitBtn" id="submitBtn">
+              Any
+            </button>
+            <!-- Food type checkboxes from JS here -->
+          </div>
+          <h4 style="margin-top: 10px">Types of food:</h4>
+        </form>
+      </div>
+    </section>
+
+    <section class="main">
+      <header>
+        <div class="main-header">
+          <h1>findmeal.rs</h1>
+          <p>Filter restaurants by multiple parameters, in seconds!</p>
+        </div>
+      </header>
+
+      <div class="container" id="container">
+        <!-- Restaurants display from app.js -->
+      </div>
+
+      <footer>
+        <h1>Restaurants application V1</h1>
+        <h3>Set up for further imnprovements</h3>
+
+        <h3>
+          <br />
+          &copy; 2021 Milan Vulin
+        </h3>
+      </footer>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
